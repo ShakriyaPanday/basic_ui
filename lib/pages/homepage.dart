@@ -3,6 +3,7 @@ import 'package:basic_ui/widgets/container.dart';
 import 'package:basic_ui/widgets/gridview.dart';
 import 'package:basic_ui/widgets/rounded.dart';
 import 'package:basic_ui/widgets/row.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,23 +14,25 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
+          elevation: 0,
           backgroundColor: Colors.deepPurple[300],
-          selectedItemColor: Colors.white,
+          selectedItemColor: Colors.black,
           unselectedItemColor: Colors.white,
+          currentIndex: 1,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined), label: "Home"),
+                icon: Icon(CupertinoIcons.home), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.qr_code_scanner), label: "Qr code"),
+                icon: Icon(CupertinoIcons.qrcode), label: "Qr code"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.exit_to_app), label: "Exit"),
+                icon: Icon(CupertinoIcons.clear_circled), label: "Exit"),
           ]),
       backgroundColor: Colors.grey[400],
       appBar: AppBar(
         title: Text("Basic UI"),
         centerTitle: true,
         backgroundColor: Colors.deepPurple[400],
-        elevation: 1,
+        elevation: 0,
       ),
       body: RoundedWidget(),
     );
