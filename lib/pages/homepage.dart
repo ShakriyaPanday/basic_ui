@@ -11,13 +11,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar:
-          BottomNavigationBar(type: BottomNavigationBarType.fixed, items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.qr_code_scanner), label: "Qr code"),
-        BottomNavigationBarItem(icon: Icon(Icons.exit_to_app), label: "Exit"),
-      ]),
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.deepPurple[300],
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_outlined), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.qr_code_scanner), label: "Qr code"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.exit_to_app), label: "Exit"),
+          ]),
       backgroundColor: Colors.grey[400],
       appBar: AppBar(
         title: Text("Basic UI"),
