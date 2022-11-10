@@ -1,3 +1,4 @@
+import 'package:basic_ui/widgets/stateful/selector.dart';
 import 'package:basic_ui/widgets/stateful/counter.dart';
 import 'package:basic_ui/widgets/stateless/column.dart';
 import 'package:basic_ui/widgets/stateless/container.dart';
@@ -35,7 +36,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.deepPurple[400],
         elevation: 0,
       ),
-      body: CounterWidget(),
+      body: ItemselectorWidget(),
     );
   }
 }
