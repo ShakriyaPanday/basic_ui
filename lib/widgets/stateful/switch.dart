@@ -9,21 +9,36 @@ class SwitchWidget extends StatefulWidget {
 }
 
 class _SwitchWidgetState extends State<SwitchWidget> {
-  bool light = false;
+  bool light1 = false;
+  bool light2 = false;
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
-        child: CupertinoSwitch(
-            value: light,
-            activeColor: Colors.amber,
-            thumbColor: Colors.black,
-            trackColor: Colors.white,
-            onChanged: ((value) {
-              setState(() {
-                light = value;
-              });
-            })),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            child: Switch(
+                value: light1,
+                onChanged: ((value) {
+                  setState(() {
+                    light1 = value;
+                  });
+                })),
+          ),
+          SizedBox(
+            height: 40.0,
+          ),
+          Container(
+            child: CupertinoSwitch(
+                value: light2,
+                onChanged: ((value) {
+                  setState(() {
+                    light2 = value;
+                  });
+                })),
+          ),
+        ],
       ),
     );
   }
