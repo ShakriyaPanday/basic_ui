@@ -20,6 +20,8 @@ class _SwitchWidgetState extends State<SwitchWidget> {
           Container(
             child: Switch(
                 value: light1,
+                activeColor: Colors.white,
+                activeTrackColor: Colors.green,
                 onChanged: ((value) {
                   setState(() {
                     light1 = value;
