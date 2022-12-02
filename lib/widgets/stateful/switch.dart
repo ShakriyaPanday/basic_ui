@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SwitchWidget extends StatefulWidget {
@@ -14,8 +13,12 @@ class _SwitchWidgetState extends State<SwitchWidget> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        child: CupertinoSwitch(
+        child: Switch(
             value: light,
+            activeColor: Colors.amber,
+            activeTrackColor: Colors.deepOrange,
+            inactiveTrackColor: Colors.amber,
+            inactiveThumbColor: Colors.deepOrange,
             onChanged: ((value) {
               setState(() {
                 light = value;
