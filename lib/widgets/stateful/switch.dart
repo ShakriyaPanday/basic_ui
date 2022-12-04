@@ -19,6 +19,7 @@ class _SwitchWidgetState extends State<SwitchWidget> {
         children: [
           Container(
             child: Switch(
+                splashRadius: 200.0,
                 value: light1,
                 activeColor: Colors.white,
                 activeTrackColor: Colors.green,
