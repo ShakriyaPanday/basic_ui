@@ -6,19 +6,21 @@ class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     PageController pageController = PageController();
-    return PageView(
-      controller: pageController,
-      children: [
-        Center(
-          child: Text('First Page'),
-        ),
-        Center(
-          child: Text('Second Page'),
-        ),
-        Center(
-          child: Text('Third Page'),
-        ),
-      ],
-    );
+    return PageView.builder(itemBuilder: ((context, index) {
+      return PageView(
+        controller: pageController,
+        children: const <Widget>[
+          Center(
+            child: Text('First1 Page'),
+          ),
+          Center(
+            child: Text('Second Page'),
+          ),
+          Center(
+            child: Text('Third Page'),
+          ),
+        ],
+      );
+    }));
   }
 }
