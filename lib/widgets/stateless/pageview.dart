@@ -5,22 +5,34 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PageController pageController = PageController();
+    PageController pageController = PageController(initialPage: 2);
     return PageView.builder(itemBuilder: ((context, index) {
       return PageView(
+        pageSnapping: true,
         controller: pageController,
-        children: const <Widget>[
-          Center(
-            child: Text('First1 Page'),
-          ),
-          Center(
-            child: Text('Second Page'),
-          ),
-          Center(
-            child: Text('Third Page'),
-          ),
-        ],
+        children: listWidget,
       );
     }));
   }
 }
+
+final listWidget = [
+  Scaffold(
+    backgroundColor: Colors.amber,
+    body: Center(
+      child: Text('First Page'),
+    ),
+  ),
+  Scaffold(
+    backgroundColor: Colors.red,
+    body: Center(
+      child: Text('Second Page'),
+    ),
+  ),
+  Scaffold(
+    backgroundColor: Colors.deepOrange,
+    body: Center(
+      child: Text('Third Page'),
+    ),
+  ),
+];
